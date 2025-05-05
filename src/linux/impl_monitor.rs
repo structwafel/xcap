@@ -230,6 +230,7 @@ impl ImplMonitor {
         let screen_buf = get_current_screen_buf()?;
 
         let scale_factor = get_scale_factor().unwrap_or(1.0);
+        dbg!(scale_factor);
 
         let get_monitors_cookie = conn.send_request(&GetMonitors {
             window: screen_buf.root(),
